@@ -28,7 +28,7 @@ echo IS_WEEKEND[%IS_WEEKEND%]
 :: Clean Slicer settings
 :: ----------------------------------------------------------------------------
 :: See https://github.com/Slicer/Slicer/pull/6879 introduced in March 2023
-call :fastdel "C:\Users\svc-dashboard\AppData\Roaming\slicer.org"
+call :fastdel "%APPDATA%\slicer.org"
 
 :: ----------------------------------------------------------------------------
 :: Build Slicer
@@ -59,7 +59,7 @@ if "%IS_WEEKEND%"=="1" (
 :: ----------------------------------------------------------------------------
 :: Clean SlicerSALT settings
 :: ----------------------------------------------------------------------------
-call :fastdel "C:\Users\svc-dashboard\AppData\Roaming\Kitware, Inc"
+call :fastdel "%APPDATA%\Kitware, Inc"
 
 :: force execution to quit at the end of the "main" logic
 EXIT /B %ERRORLEVEL%
